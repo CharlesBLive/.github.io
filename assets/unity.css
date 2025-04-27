@@ -1,0 +1,26 @@
+/* =====================================
+   Responsive Unity WebGL container
+===================================== */
+
+/* Make the container scale to the viewport but cap at the original size */
+#unity-container.unity-desktop {
+    width: 100vw;            /* fill width of viewport */
+    max-width: 960px;        /* no larger than intended build width */
+    height: auto;            /* height will follow canvas aspect */
+    margin: 0 auto;          /* center horizontally */
+    position: relative;
+  }
+  
+  /* Canvas itself should be fluid */
+  #unity-canvas {
+    width: 100% !important;
+    height: auto  !important;
+    display: block;          /* remove inline-block whitespace */
+    max-height: 600px;       /* no taller than intended build height */
+  }
+  
+  /* Loading bar & footer will reposition naturally */
+  #unity-loading-bar, #unity-footer {
+    width: 100%!important;
+  }
+  
