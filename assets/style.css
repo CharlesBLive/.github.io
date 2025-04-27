@@ -189,3 +189,31 @@ body {
 .nav-button, .game-button, .project-card p a {
     transition: all 0.3s ease;
 }
+
+/* ==========================
+   Unity page nav buttons
+========================== */
+.unity-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+  .unity-nav a {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+  .unity-nav a:hover {
+    background: #00ffff;
+    color: black;
+  }
+  
