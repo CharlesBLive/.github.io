@@ -1,3 +1,6 @@
+/* ==========================
+    Global Styles
+========================== */
 body {
     background-color: #0f0f0f;
     color: #ffffff;
@@ -6,7 +9,9 @@ body {
     padding: 0;
 }
 
-/* Navbar */
+/* ==========================
+    Navbar
+========================== */
 .navbar {
     display: flex;
     justify-content: center;
@@ -31,7 +36,9 @@ body {
     color: black;
 }
 
-/* Welcome Section */
+/* ==========================
+    Welcome Section (Home page)
+========================== */
 .welcome {
     background: #015b6d;
     margin: 30px auto;
@@ -42,7 +49,9 @@ body {
     border: 2px solid #00ffff;
 }
 
-/* Experience Section */
+/* ==========================
+    Experience Section
+========================== */
 .experience {
     background: #01303f;
     margin: 30px auto;
@@ -53,7 +62,33 @@ body {
     font-size: 16px;
 }
 
-/* Projects Section */
+/* Style links inside experience section */
+.experience a {
+    color: #e7110e; /* Red link color */
+    text-decoration: underline;
+}
+
+.experience a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Bullet list inside experience section */
+.experience ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Bullet points (list items) styling */
+.experience li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* ==========================
+    Projects Section
+========================== */
 .projects {
     display: flex;
     justify-content: center;
@@ -62,6 +97,7 @@ body {
     width: 90%;
 }
 
+/* Individual project card */
 .project-card {
     background: #015b6d;
     padding: 20px;
@@ -71,6 +107,7 @@ body {
     border-radius: 15px;
 }
 
+/* Play button inside project cards */
 .game-button {
     display: inline-block;
     margin-top: 20px;
@@ -87,22 +124,65 @@ body {
     color: black;
 }
 
-.experience ul {
-    list-style-type: disc;
-    padding-left: 40px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.experience li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-
-.experience a {
+/* Hyperlinks inside project cards */
+.project-card p a {
     color: #00ffff;
     text-decoration: underline;
 }
-.experience a:hover {
+
+.project-card p a:hover {
     color: #ffffff;
+}
+
+/* ==========================
+    Page Titles (Big top banners)
+========================== */
+.page-title {
+    margin: 20px auto;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    border: 2px solid #00aaff;
+    border-radius: 15px;
+    background-color: #501f1f;
+    color: #87ceeb;
+    width: fit-content;
+}
+
+/* ==========================
+    Main Content Container
+========================== */
+.main-container {
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+/* Section box inside main container */
+.content-box {
+    margin: 30px auto;
+    padding: 30px;
+    background: #015b6d;
+    border: 1px solid #00ffff;
+    border-radius: 15px;
+    color: white;
+}
+
+/* ==========================
+    Game Images inside project cards
+========================== */
+.game-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* ==========================
+    Smooth Transition Effects
+========================== */
+.nav-button, .game-button, .project-card p a {
+    transition: all 0.3s ease;
 }
