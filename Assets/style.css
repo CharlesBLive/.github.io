@@ -86,3 +86,23 @@ body {
     background: #00ffff;
     color: black;
 }
+
+.experience ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.experience li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.experience a {
+    color: #00ffff;
+    text-decoration: underline;
+}
+.experience a:hover {
+    color: #ffffff;
+}
