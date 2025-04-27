@@ -101,11 +101,11 @@ body {
 .project-card {
     background: #015b6d;
     padding: 20px;
-    width: 600px; /* ← wider */
+    width: 600px;
     text-align: center;
     border: 2px solid red;
     border-radius: 15px;
-    margin: 20px auto; /* center cards vertically */
+    margin: 30px auto; /* Add space around each card */
 }
 
 
