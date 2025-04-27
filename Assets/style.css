@@ -101,11 +101,13 @@ body {
 .project-card {
     background: #015b6d;
     padding: 20px;
-    width: 250px;
+    width: 600px; /* ← wider */
     text-align: center;
     border: 2px solid red;
     border-radius: 15px;
+    margin: 20px auto; /* center cards vertically */
 }
+
 
 /* Play button inside project cards */
 .game-button {
@@ -175,9 +177,10 @@ body {
     Game Images inside project cards
 ========================== */
 .game-image {
-    width: 100%;
+    width: 90%;
     height: auto;
-    margin: 10px 0;
+    margin: 15px 0;
+    border-radius: 10px;
 }
 
 /* ==========================
