@@ -217,4 +217,86 @@ body {
     color: black;
   }
   
+  /* ==========================
+   Mobile‐Responsive Overrides
+========================== */
+@media (max-width: 768px) {
+    /* 1. Nav: wrap & shrink buttons */
+    .navbar {
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 0;
+    }
+    .nav-button {
+      flex: 1 1 calc(50% - 16px);
+      font-size: 16px;
+      padding: 8px 12px;
+      text-align: center;
+    }
   
+    /* 2. Page title: full width & smaller font */
+    .page-title {
+      width: 90%;
+      font-size: 28px;
+      padding: 16px 24px;
+    }
+  
+    /* 3. Main containers & sections: nearly full width */
+    .welcome,
+    .experience,
+    .content-box,
+    .main-container,
+    .projects {
+      width: 95%;
+      margin: 20px auto;
+      padding: 20px;
+    }
+  
+    /* 4. Experience: tighter padding */
+    .experience {
+      padding: 20px;
+      font-size: 14px;
+    }
+  
+    /* 5. Projects: stack cards vertically & full width */
+    .projects {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .project-card {
+      flex-direction: column !important;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+    .project-card .project-info {
+      padding-right: 0;
+    }
+    .project-card .project-image {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .project-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* 6. Unity WebGL page tweaks */
+    #unity-container.unity-desktop {
+      max-width: 100vw !important;
+    }
+    #unity-canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+  
+    /* 7. Buttons & links: slightly smaller touch targets */
+    .game-button,
+    .unity-nav a {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 768px) {
+    body { background: red !important; }
+  }
