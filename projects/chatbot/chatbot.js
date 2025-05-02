@@ -1,13 +1,12 @@
-// assets/chatbot.js
-const msgsEl   = document.getElementById('messages');
-const inputEl  = document.getElementById('input');
-const sendBtn  = document.getElementById('send');
+const msgsEl  = document.getElementById('messages');
+const inputEl = document.getElementById('input');
+const sendBtn = document.getElementById('send');
 
 let conversation = [
   { role: 'system', content: 'You are a helpful assistant.' }
 ];
 
-function appendMessage(who, text){
+function appendMessage(who, text) {
   const msg = document.createElement('div');
   msg.className = `message ${who}`;
   msg.textContent = text;
@@ -15,20 +14,14 @@ function appendMessage(who, text){
   msgsEl.scrollTop = msgsEl.scrollHeight;
 }
 
-async function callOpenAI(messages){
-  const res = await fetch('https://api.openai.com/v1/chat/completions', {
+async function callCohere(messages) {
+  const res = await fetch('/api/cohereChat', {
     method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${window.OPENAI_API_KEY}`,
-      'Content-Type':  'application/json'
-    },
-    body: JSON.stringify({
-      model:    'gpt-4o-mini',
-      messages: messages
-    })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages })
   });
-  const { choices } = await res.json();
-  return choices[0].message;
+  const { reply } = await res.json();
+  return reply;  // { role, content }
 }
 
 sendBtn.addEventListener('click', async () => {
@@ -43,12 +36,13 @@ sendBtn.addEventListener('click', async () => {
   // placeholder
   appendMessage('bot', '…');
 
-  // call OpenAI
-  const reply = await callOpenAI(conversation);
+  // get the AI reply
+  const reply = await callCohere(conversation);
 
-  // swap “…” for real text
-  const placeholder = [...msgsEl.querySelectorAll('.message.bot')].pop();
-  placeholder.textContent = reply.content;
+  // swap placeholder for real text
+  const placeholders = msgsEl.querySelectorAll('.message.bot');
+  placeholders[placeholders.length - 1].textContent = reply.content;
 
+  // record it
   conversation.push({ role: 'assistant', content: reply.content });
 });
