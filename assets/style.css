@@ -1,302 +1,274 @@
 /* ==========================
-    Global Styles
+   Global Styles
 ========================== */
 body {
-    background-color: #0f0f0f;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================
-    Navbar
+ Navbar
 ========================== */
 .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #000000;
-    padding: 20px 0;
-    gap: 20px;
-    border-bottom: 2px solid white;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 20px 0;
+  gap: 20px;
+  border-bottom: 2px solid #fff;
 }
-
 .nav-button {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-    border: 2px solid white;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
 }
-
 .nav-button:hover {
-    background: white;
-    color: black;
+  background: #fff;
+  color: #000;
 }
 
 /* ==========================
-    Welcome Section (Home page)
+ Welcome Section (Home)
 ========================== */
 .welcome {
-    background: #015b6d;
-    margin: 30px auto;
-    padding: 30px;
-    width: 80%;
-    text-align: center;
-    border-radius: 15px;
-    border: 2px solid #00ffff;
+  background: #015b6d;
+  margin: 30px auto;
+  padding: 30px;
+  width: 80%;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid #0ff;
 }
 
 /* ==========================
-    Experience Section
+ Experience Section
 ========================== */
 .experience {
-    background: #01303f;
-    margin: 30px auto;
-    padding: 30px;
-    width: 80%;
-    border-radius: 15px;
-    border: 2px solid red;
-    font-size: 16px;
+  background: #01303f;
+  margin: 30px auto;
+  padding: 30px;
+  width: 80%;
+  border-radius: 15px;
+  border: 2px solid red;
+  font-size: 16px;
 }
-
-/* Style links inside experience section */
 .experience a {
-    color: #e7110e; /* Red link color */
-    text-decoration: underline;
+  color: #e7110e;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
-
-.experience a:hover {
-    color: #ffffff; /* White on hover */
-}
-
-/* Bullet list inside experience section */
+.experience a:hover { color: #fff; }
 .experience ul {
-    list-style-type: disc;
-    padding-left: 40px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+  list-style-type: disc;
+  padding-left: 40px;
+  margin: 10px 0 20px;
 }
-
-/* Bullet points (list items) styling */
 .experience li {
-    margin-bottom: 8px;
-    line-height: 1.5;
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 /* ==========================
-    Projects Section
+ Projects Section
 ========================== */
 .projects {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 50px auto;
-    width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 50px auto;
+  width: 90%;
 }
-
-/* Individual project card */
 .project-card {
-    background: #015b6d;
-    padding: 20px;
-    width: 600px;
-    text-align: center;
-    border: 2px solid red;
-    border-radius: 15px;
-    margin: 30px auto; /* Add space around each card */
+  display: flex;
+  flex-direction: column;
+  background: #015b6d;
+  padding: 30px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  border: 2px solid red;
+  border-radius: 15px;
+  box-sizing: border-box;
 }
-
-
-/* Play button inside project cards */
-.game-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
+.project-card h3 {
+  margin-top: 0;
+  color: #0ff;
 }
-
-.game-button:hover {
-    background: #00ffff;
-    color: black;
+.project-card p {
+  line-height: 1.5;
 }
-
-/* Hyperlinks inside project cards */
-.project-card p a {
-    color: #00ffff;
-    text-decoration: underline;
+.project-card img {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
 }
-
-.project-card p a:hover {
-    color: #ffffff;
+.project-card .game-button {
+  display: inline-block;
+  margin-top: 20px;
 }
 
 /* ==========================
-    Page Titles (Big top banners)
+ Buttons & Links
+========================== */
+.game-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.game-button:hover {
+  background: #0ff;
+  color: #000;
+}
+.project-card p a {
+  color: #0ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.project-card p a:hover { color: #fff; }
+
+/* ==========================
+ Page Titles
 ========================== */
 .page-title {
-    margin: 20px auto;
-    padding: 20px 40px;
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    border: 2px solid #00aaff;
-    border-radius: 15px;
-    background-color: #501f1f;
-    color: #87ceeb;
-    width: fit-content;
+  margin: 20px auto;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  border: 2px solid #0af;
+  border-radius: 15px;
+  background: #501f1f;
+  color: #87ceeb;
+  width: fit-content;
 }
 
 /* ==========================
-    Main Content Container
+ Main Container & Boxes
 ========================== */
 .main-container {
-    margin: 30px auto;
-    padding: 20px;
-    width: 90%;
-    border: 2px solid white;
-    border-radius: 15px;
+  margin: 30px auto;
+  padding: 20px;
+  width: 90%;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  box-sizing: border-box;
 }
-
-/* Section box inside main container */
 .content-box {
-    margin: 30px auto;
-    padding: 30px;
-    background: #015b6d;
-    border: 1px solid #00ffff;
-    border-radius: 15px;
-    color: white;
+  margin: 30px auto;
+  padding: 30px;
+  background: #015b6d;
+  border: 1px solid #0ff;
+  border-radius: 15px;
+  color: #fff;
 }
 
 /* ==========================
-    Game Images inside project cards
-========================== */
-.game-image {
-    width: 90%;
-    height: auto;
-    margin: 15px 0;
-    border-radius: 10px;
-}
-
-/* ==========================
-    Smooth Transition Effects
-========================== */
-.nav-button, .game-button, .project-card p a {
-    transition: all 0.3s ease;
-}
-
-/* ==========================
-   Unity page nav buttons
+ Unity Page Nav Buttons
 ========================== */
 .unity-nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-  .unity-nav a {
-    display: inline-block;
-    background: white;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    font-family: sans-serif;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    margin-right: 10px;
-    transition: all 0.3s ease;
-  }
-  .unity-nav a:hover {
-    background: #00ffff;
-    color: black;
-  }
-  
-  /* ==========================
-   Mobile‐Responsive Overrides
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+.unity-nav a {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+.unity-nav a:hover {
+  background: #0ff;
+  color: #000;
+}
+
+/* ==========================
+ Unity WebGL Responsive Fix
+ (remove any 100vw usage)
 ========================== */
-@media (max-width: 768px) {
-    /* 1. Nav: wrap & shrink buttons */
-    .navbar {
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 10px 0;
-    }
-    .nav-button {
-      flex: 1 1 calc(50% - 16px);
-      font-size: 16px;
-      padding: 8px 12px;
-      text-align: center;
-    }
-  
-    /* 2. Page title: full width & smaller font */
-    .page-title {
-      width: 90%;
-      font-size: 28px;
-      padding: 16px 24px;
-    }
-  
-    /* 3. Main containers & sections: nearly full width */
-    .welcome,
-    .experience,
-    .content-box,
-    .main-container,
-    .projects {
-      width: 95%;
-      margin: 20px auto;
-      padding: 20px;
-    }
-  
-    /* 4. Experience: tighter padding */
-    .experience {
-      padding: 20px;
-      font-size: 14px;
-    }
-  
-    /* 5. Projects: stack cards vertically & full width */
-    .projects {
-      flex-direction: column;
-      gap: 20px;
-    }
-    .project-card {
-      flex-direction: column !important;
-      width: 100%;
-      padding: 20px;
-      text-align: center;
-    }
-    .project-card .project-info {
-      padding-right: 0;
-    }
-    .project-card .project-image {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .project-image img {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    /* 6. Unity WebGL page tweaks */
-    #unity-container.unity-desktop {
-      max-width: 100vw !important;
-    }
-    #unity-canvas {
-      width: 100% !important;
-      height: auto !important;
-    }
-  
-    /* 7. Buttons & links: slightly smaller touch targets */
-    .game-button,
-    .unity-nav a {
-      padding: 8px 16px;
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 768px) {
-    body { background: red !important; }
-  }
+#unity-container.unity-desktop {
+  width: 100%;        /* ← percent, not vw! stops the endless loop */
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+#unity-canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* ==========================
+ Mobile‐Responsive Overrides
+========================== */
+@media only screen and (max-width: 768px) {
+/* Nav wraps onto two per row */
+.navbar {
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0;
+}
+.nav-button {
+  flex: 1 1 calc(50% - 16px);
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+/* Sections nearly full‐width */
+.welcome, .experience, .projects, .main-container {
+  width: 95% !important;
+  margin: 20px auto !important;
+  padding: 20px !important;
+}
+.experience {
+  font-size: 14px;
+}
+
+/* Project cards stack */
+.projects {
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+.project-card {
+  flex-direction: column !important;
+  width: 100% !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+.project-card img {
+  margin: 20px auto !important;
+}
+
+/* Unity canvas fluid */
+#unity-canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Smaller touch targets */
+.game-button, .unity-nav a {
+  padding: 8px 16px !important;
+  font-size: 16px !important;
+}
+}
