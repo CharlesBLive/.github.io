@@ -1,23 +1,71 @@
-/* ================================
-   Unity WebGL Full‐Width Override
-================================= */
+/* assets/unity.css — center Unity WebGL on desktop, fluid on mobile */
 
-/* Remove the 960px max‐width so it can fill the screen */
+/* 1) Reset margins */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2) Your corner nav */
+.unity-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+.unity-nav a {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background .2s;
+}
+.unity-nav a:hover {
+  background: #0ff;
+}
+
+/* Override TemplateData “left/top/transform” centering */
 #unity-container.unity-desktop {
-  width: 100% !important;       /* always fill its parent */
-  max-width: none !important;   /* drop the 960px cap */
-  margin: 0 auto !important;    /* center if parent is wider */
+  position: relative     !important; /* take it out of absolute */
+  left:     auto         !important;
+  top:      auto         !important;
+  transform:none         !important; /* kill the translate(-50%, -50%) */
+
+  width:    960px        !important; /* your native build size */
+  height:   auto         !important; /* scale by aspect‐ratio */
+  margin:   120px auto 0  !important; /* push down under your nav, center horizontally */
+}
+
+/* Fluid down on narrow screens */
+@media (max-width: 960px) {
+  #unity-container.unity-desktop {
+    width:  100%    !important;
+    height: auto    !important;
+    margin: 20px auto !important;
+  }
+}
+
+/* Canvas should always fill the container */
+#unity-canvas {
+  display: block     !important;
+  width:   100%      !important;
+  height:  100%      !important;
+}
+
+/* Loading bar, footer, warnings stretch full width */
+#unity-loading-bar,
+#unity-warning,
+#unity-footer {
+  width:      100%   !important;
   box-sizing: border-box;
 }
 
-/* Canvas must stretch to the container */
-#unity-canvas {
-  width: 100% !important;
-  height: auto !important;
-  display: block;
-}
-
-/* Prevent any unwanted horizontal scrollbars */
-html, body {
-  overflow-x: hidden;
+/* push all page content below the nav bar */
+body {
+  padding-top: 100px; /* adjust this value to match your nav height + breathing room */
+  box-sizing: border-box;
 }
