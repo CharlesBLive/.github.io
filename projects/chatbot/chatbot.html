@@ -1,13 +1,30 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- //paste in email
+//chat asks you what tone you want
 
-  <!-- Global & chatbot styles -->
+//you tell it what tone(buisness, friendly, angrey)
+
+//chat sips back a new email in desired tone -->
+
+<!-- chatbot.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/chatbot.css">
 
-  <!-- Load your chat logic -->
+  <!-- Load chat logic after HTML parsing -->
   <script defer src="chatbot.js"></script>
 
   <title>Email Chatbot</title>
 </head>
+<body>
+  <!-- Chat interface elements -->
+  <div id="messages"></div>        <!-- Chat messages appear here -->
+  <input id="input" type="text" placeholder="Type your message…" />
+  <button id="send">Send</button>
+</body>
+</html>
